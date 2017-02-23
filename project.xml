@@ -31,8 +31,9 @@
     <use project = "netsnmp"
          libname = "netsnmp"
          header = "net-snmp/net-snmp-config.h"
+         redhat_name = "net-snmp-devel"
+         debian_name = "libsnmp-dev"
          test = "init_snmp" />
-
     <class name = "luasnmp" private = "1">lua snmp extension</class>
     <class name = "rule" private = "1">class representing one rule</class>
     <class name = "vsjson" private = "1">JSON parser</class>
