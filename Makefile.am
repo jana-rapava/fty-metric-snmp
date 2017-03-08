@@ -18,11 +18,10 @@ AM_CPPFLAGS = \
     ${malamute_CFLAGS} \
     ${fty_proto_CFLAGS} \
     ${lua_5_1_CFLAGS} \
-    ${lua_CFLAGS} \
     ${netsnmp_CFLAGS} \
     -I$(srcdir)/include
 
-project_libs = ${libzmq_LIBS} ${czmq_LIBS} ${malamute_LIBS} ${fty_proto_LIBS} ${lua_5_1_LIBS} ${lua_LIBS} ${netsnmp_LIBS}
+project_libs = ${libzmq_LIBS} ${czmq_LIBS} ${malamute_LIBS} ${fty_proto_LIBS} ${lua_5_1_LIBS} ${netsnmp_LIBS}
 
 SUBDIRS = doc
 DIST_SUBDIRS = doc
@@ -45,7 +44,6 @@ EXTRA_DIST += \
     Findmalamute.cmake \
     Findfty_proto.cmake \
     Findlua_5_1.cmake \
-    Findlua.cmake \
     Findnetsnmp.cmake \
     CMakeLists.txt
 endif

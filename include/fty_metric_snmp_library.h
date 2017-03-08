@@ -34,12 +34,11 @@
 #include <malamute.h>
 #include <ftyproto.h>
 #include <lua.h>
-#include <lua.h>
 #include <net-snmp/net-snmp-config.h>
 
 //  FTY_METRIC_SNMP version macros for compile-time API detection
-#define FTY_METRIC_SNMP_VERSION_MAJOR 0
-#define FTY_METRIC_SNMP_VERSION_MINOR 1
+#define FTY_METRIC_SNMP_VERSION_MAJOR 1
+#define FTY_METRIC_SNMP_VERSION_MINOR 0
 #define FTY_METRIC_SNMP_VERSION_PATCH 0
 
 #define FTY_METRIC_SNMP_MAKE_VERSION(major, minor, patch) \

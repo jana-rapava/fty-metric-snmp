@@ -5,10 +5,11 @@
     >
 
     <target name = "debian" />
+    <target name = "redhat" />
     <target name = "travis" travis_distcheck = "0" />
 
     <include filename = "license.xml" />
-    <version major = "0" minor = "1" patch = "0" />
+    <version major = "1" minor = "0" patch = "0" />
 
     <use project = "czmq" min_major = "3" />
     <use project = "malamute" min_major = "1" />
@@ -19,20 +20,14 @@
         test = "fty_proto_test">
         <use project = "malamute" />
     </use>
-    
-    <use project = "lua-5.1" />
 
-    <use project = "lua" libname = "lua" prefix="lua"
-         min_major = "5" min_minor = "1" mit_patch = "0"
-         repository = "https://github.com/lua/lua"
-         includename = "lua" debian_name="liblua5.1-0-dev"
-         test = "lua_close" />
+    <use project = "lua-5.1" />
 
     <use project = "netsnmp"
          libname = "netsnmp"
          header = "net-snmp/net-snmp-config.h"
-         redhat_name = "net-snmp-devel"
          debian_name = "libsnmp-dev"
+         redhat_name = "net-snmp-devel"
          test = "init_snmp" />
     <class name = "luasnmp" private = "1">lua snmp extension</class>
     <class name = "rule" private = "1">class representing one rule</class>
