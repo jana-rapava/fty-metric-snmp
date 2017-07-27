@@ -32,8 +32,8 @@ Name:           fty-metric-snmp
 Version:        1.0.0
 Release:        1
 Summary:        agent for getting measurements using lua and snmp
-License:        MIT
-URL:            http://example.com/
+License:        GPL-2.0+
+URL:            https://42ity.org
 Source0:        %{name}-%{version}.tar.gz
 Group:          System/Libraries
 # Note: ghostscript is required by graphviz which is required by
@@ -120,15 +120,15 @@ find %{buildroot} -name '*.la' | xargs rm -f
 %{_bindir}/fty-metric-snmp-rule
 %{_mandir}/man1/fty-metric-snmp-rule*
 %config(noreplace) %{_sysconfdir}/fty-metric-snmp/fty-metric-snmp.cfg
-/usr/lib/systemd/system/fty-metric-snmp{,@*}.{service,*}
+/usr/lib/systemd/system/fty-metric-snmp.service
 %dir %{_sysconfdir}/fty-metric-snmp
 %if 0%{?suse_version} > 1315
 %post
-%systemd_post fty-metric-snmp{,@*}.{service,*}
+%systemd_post fty-metric-snmp.service
 %preun
-%systemd_preun fty-metric-snmp{,@*}.{service,*}
+%systemd_preun fty-metric-snmp.service
 %postun
-%systemd_postun_with_restart fty-metric-snmp{,@*}.{service,*}
+%systemd_postun_with_restart fty-metric-snmp.service
 %endif
 
 %changelog

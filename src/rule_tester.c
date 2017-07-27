@@ -45,7 +45,7 @@ rule_tester (
         puts ("Rule not specified!");
         return 1;
     }
-    
+
     int result = 0;
     int returnedvalues = 0;
     rule_t *rule = rule_new ();
@@ -57,6 +57,7 @@ rule_tester (
     }
     if (luaL_dostring (lua, rule_evaluation (rule)) != 0) {
         puts ("Error: lua syntax error");
+        lua_error (lua);
         result = 3;
         goto cleanup;
     }
